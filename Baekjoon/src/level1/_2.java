@@ -2,7 +2,7 @@ package level1;
 
 import java.io.*;
 
-public class Two {
+public class _2 {
 
 	public static void main(String[] args) throws IOException{
 

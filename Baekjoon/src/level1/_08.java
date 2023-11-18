@@ -2,7 +2,7 @@ package level1;
 
 import java.util.Scanner;
 
-public class _8 {
+public class _08 {
 
 	public static void main(String[] args){
 		int y = 0;

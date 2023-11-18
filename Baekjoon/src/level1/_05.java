@@ -1,5 +1,5 @@
 package level1;
 
-public class _7 {
+public class _05 {
 
 }

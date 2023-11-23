@@ -2,7 +2,7 @@ package level2;
 
 import java.io.*;
 
-public class _4 {
+public class _04 {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

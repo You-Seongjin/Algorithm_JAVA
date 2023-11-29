@@ -15,7 +15,7 @@ public class _001 {
 	
 	public String[] solution(String[] players, String[] callings) {
         String[] answer = {};
-        
+        //방법생각 몇번불렸는지 배열하나더 만들기
         if() {
         	
         }

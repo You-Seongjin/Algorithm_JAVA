@@ -1,5 +1,7 @@
 package level1;
 
+import java.util.*;
+
 /*
 얀에서는 매년 달리기 경주가 열립니다. 
 해설진들은 선수들이 자기 바로 앞의 선수를 추월할 때 추월한 선수의 이름을 부릅니다. 
@@ -14,25 +16,182 @@ package level1;
 public class _001 {
 	
 	public String[] solution(String[] players, String[] callings) {
-        String[] answer = {};
-        //방법생각 몇번불렸는지 배열하나더 만들기
-        if() {
-        	
+        String[] answer = new String[players.length];
+        
+        // 방법 1 정답 But 시간초과
+//        answer = players;
+//        String temp = "";
+//        for(int i = 0 ; i < callings.length ; i++) {
+//        	for(int k = 0 ; k < answer.length ;k++) {
+//        		if(callings[i].equals(answer[k])) {
+//        			temp = answer[k-1];
+//        			answer[k-1] = answer[k];
+//        			answer[k] = temp;
+//        		}
+//        	}
+//        }
+
+        
+        //방법 2 정답 StringBuilder 사용 But 런타임 에러
+//        answer = players;
+//        StringBuilder sb = new StringBuilder();
+//        
+//        for(int i = 0 ; i < callings.length ; i++) {
+//	        for(int k = 0 ; k < answer.length ;k++) {
+//	        	if(callings[i].equals(answer[k])) {
+//	        		sb.append(answer[k-1]);
+//	        		answer[k-1] = answer[k];
+//	        		answer[k] = sb.toString();
+//	        		sb.delete(0, answer[k-1].length());
+//	        	}
+//	        }
+//        }
+        
+        //방법 3 실패
+//        int call_name[] = new int[players.length];
+//        for(int i = 0 ; i<call_name.length; i++) {
+//        	call_name[i] = 0;
+//        }
+//        
+//        for(int i = 0 ; i < callings.length; i++) {
+//        	for(int k = 0 ; k < players.length; k++) {
+//        		if(callings[i].equals(players[k])) {
+//        			call_name[k]++;
+//        		}
+//        	}
+//        }
+//        
+//        int rank[] = new int[players.length];
+//        for(int i = 0 ; i < players.length; i++) {
+//        	rank[i] = i+1;
+//        }
+//        
+//        for(int i = 0 ; i < rank.length; i++) {
+//        	if(call_name[i] > 0) {
+//        		int num = call_name[i];
+//        		rank[i] = rank[i] - num;
+//        		rank[i - num] += num;
+//        	}	
+//        }
+//        
+//        for(int i = 0 ; i < answer.length; i++) {
+//        	for(int k = 0 ; k < rank.length ;k++) {
+//        		if(i == (rank[k]-1)) {
+//        			answer[i] = players[k];
+//        		}
+//            }
+//        }
+        
+        
+        // 방법 4 정답 But 시간초과
+//	      answer = players;
+//	      String temp = "";
+//	      for(int i = 0 ; i < callings.length ; i++) {
+//	      	for(int k = 0 ; k < answer.length ;k++) {
+//	      		if(callings[i].equals(answer[k])) {
+//	      			temp = answer[k-1];
+//	      			answer[k-1] = answer[k];
+//	      			answer[k] = temp;
+//	      		}
+//	      	
+//	      	}
+//	      }
+        
+        //방법 5 ArrayList
+//        ArrayList<String> alist = new ArrayList<>();
+//        for(int i = 0 ; i < players.length ;i++) {
+//        	 alist.add(players[i]);
+//        }
+//        
+//        for(int i = 0 ; i<callings.length; i++) {
+//        	for(int k = 0 ; k < alist.size() ;k++) {
+//        		if(callings[i].equals(alist.get(k))) {
+//        			alist.set(k, alist.get(k-1));
+//        			alist.set(k-1, callings[i]);
+//        			
+//        		}
+//        	}
+//        }
+//        
+//        for(int i = 0; i < answer.length;i++) {
+//        	answer[i] = alist.get(i);
+//        }
+        
+        //방법 5 hashmap
+        HashMap<String, Integer> hashMap = new HashMap<>();
+       // Iterator<String> keys = hashMap.keySet().iterator();
+        
+        for(int i = 0 ; i < answer.length; i++) {
+        	hashMap.put(players[i],i);
         }
+        
+        for(int i = 0 ; i<callings.length; i++) {
+        	if(hashMap.get(callings[i]) != null) {
+        		
+        		hashMap.put(callings[i], hashMap.get(callings[i])-1);
+        		//hashMap.put
+        	}
+        }
+        
+        
+        
+        
         
         
         return answer;
     }
+	
+        
+        
+        
+        
+        
 
 	public static void main(String[] args) {
 		_001 a = new _001();
 		
 		String players[] = {"mumu", "soe", "poe", "kai", "mine"};
-		String callings[] = {"kai", "kai", "mine", "mine"};
+		String callings[] = {"soe","mumu","kai", "kai", "mine", "mine"};
+		
+		
+		//test start
+//		int call_name[] = new int[players.length];
+//        for(int i = 0 ; i<call_name.length; i++) {
+//        	call_name[i] = 0;
+//        }
+//        
+//        for(int i = 0 ; i < callings.length; i++) {
+//        	for(int k = 0 ; k < players.length; k++) {
+//        		if(callings[i].equals(players[k])) {
+//        			call_name[k]++;
+//        		}
+//        	}
+//        }
+//        
+//        int rank[] = new int[players.length];
+//        for(int i = 0 ; i < players.length; i++) {
+//        	rank[i] = i+1;
+//        }
+//        
+//        for(int i = 0 ; i < rank.length; i++) {
+//        	if(call_name[i] > 0) {
+//        		int num = call_name[i];
+//        		rank[i] = rank[i] - num;
+//        		rank[i - num] += num;
+//        	}	
+//        }
+//		
+//        for(int i = 0 ; i < rank.length ; i++) {
+//        	System.out.println(rank[i]);
+//        }
+//        
+		//test end
 		
 		String result[] = a.solution(players, callings);
-		System.out.println(result);
 		
+		for(int i = 0 ; i<result.length; i++) {
+			System.out.println(result[i]);
+		}
 
 	}
 

@@ -30,6 +30,7 @@ public class _029 {
         return answer;
     }
 
+	//test
 	public static void main(String[] args) {
 		int arr[] = {0, 1, 2, 3, 4};
 		int queries[][] = {{0, 3},{1, 2},{1, 4}};

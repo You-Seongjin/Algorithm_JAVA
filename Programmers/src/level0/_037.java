@@ -64,10 +64,7 @@ public class _037 {
         }
         
         //System.out.println("중복 숫자 : " + maxcountnum);
-        
-        //방법 2 노가다 
 
-        
         return answer;
     }
 	

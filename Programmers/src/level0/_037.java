@@ -72,11 +72,11 @@ public class _037 {
 	public static void main(String[] args) {
 		_037 aa = new _037();
 		//int result = aa.solution(2, 2, 2, 2);
-		aa.solution(4, 1, 4, 4);
+		int result = aa.solution(4, 1, 4, 4);
 		//aa.solution(6, 3, 3, 6);
 		//aa.solution(2, 5, 2, 6);
 		//aa.solution(6, 4, 2, 5);
-		//System.out.println(result);
+		System.out.println(result);
 		
 
 	}

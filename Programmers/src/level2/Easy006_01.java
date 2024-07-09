@@ -1,7 +1,7 @@
 package level2;
 //속도 향상
 
-public class Easy06_01 {
+public class Easy006_01 {
 	
 	public int solution(int n) {
         int answer = 0;

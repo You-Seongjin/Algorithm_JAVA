@@ -14,7 +14,7 @@ n의 다음 큰 숫자를 return 하는 solution 함수를 완성해주세요.
 n은 1,000,000 이하의 자연수 입니다.
 */
 
-public class Easy07 {
+public class Easy007 {
 	
 	public int solution(int n) {
 		int answer = 0;
@@ -53,7 +53,7 @@ public class Easy07 {
 	
 	public static void main(String[] args) {
 
-		Easy07 asd = new Easy07();
+		Easy007 asd = new Easy007();
 		int a = asd.solution(78);
 		System.out.println(a);
 	}

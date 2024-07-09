@@ -14,7 +14,7 @@ import java.util.*;
  * 의 순서로 문자열을 모두 제거할 수 있으므로 1을 반환합니다.
  * */
 
-public class Easy08 {
+public class Easy008 {
 	
 	public int solution(String s)
     {
@@ -41,7 +41,7 @@ public class Easy08 {
     }
 
 	public static void main(String[] args) {
-		Easy08 asdasd = new Easy08();
+		Easy008 asdasd = new Easy008();
 		String s = "baaabaa";
 		asdasd.solution(s);
 

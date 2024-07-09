@@ -1,6 +1,6 @@
 package level2;
 
-public class Easy07_01 {
+public class Easy007_01 {
 	
 	public int solution(int n) {
         int answer = 0;
@@ -39,7 +39,7 @@ public class Easy07_01 {
     }
 
 	public static void main(String[] args) {
-		Easy07_01 asd = new Easy07_01();
+		Easy007_01 asd = new Easy007_01();
 		int a = asd.solution(78);
 		System.out.println(a);
 

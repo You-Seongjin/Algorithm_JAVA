@@ -1,6 +1,6 @@
 package level2;
 
-public class Easy07_02 {
+public class Easy007_02 {
 	
 	public int solution(int n) {
 		int postPattern = n & -n, 
@@ -11,7 +11,7 @@ public class Easy07_02 {
 	
 
 	public static void main(String[] args) {
-		Easy07_02 asd = new Easy07_02();
+		Easy007_02 asd = new Easy007_02();
 		int a = asd.solution(78);
 		System.out.println(a);
 

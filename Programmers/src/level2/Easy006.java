@@ -14,7 +14,7 @@ solution를 완성해주세요.
 제한사항
 n은 10,000 이하의 자연수 입니다.
 */
-public class Easy06 {
+public class Easy006 {
 	
 	public int solution(int n) {
         int answer = 0;
@@ -33,7 +33,7 @@ public class Easy06 {
 
 	public static void main(String[] args) {
 		
-		Easy06 asd = new Easy06();
+		Easy006 asd = new Easy006();
 		int a = asd.solution(20);
 		
 		System.out.println(a);

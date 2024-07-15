@@ -68,10 +68,10 @@ public class Easy011 {
 		}else if(incorrectCount == 2) {
 			humanNum = incorrectIndex_A < incorrectIndex_B ? (incorrectIndex_A % n): (incorrectIndex_B % n);
 			humanNum = humanNum == 0 ? humanNum+n : humanNum;
-			orderNum = incorrectIndex_A < incorrectIndex_B ? ((incorrectIndex_A) / n) : ((incorrectIndex_B)/ n);
+			orderNum = incorrectIndex_A < incorrectIndex_B ? ((incorrectIndex_A-1) / n +1) : ((incorrectIndex_B-1)/ n +1);
 		}
 		
-		System.out.println( (5-1)/3 +2 );
+		//System.out.println( (5-1)/3 +2 );
 		//System.out.println(incorrectIndex_A+"_A/B_"+incorrectIndex_B);
 		//System.out.println(humanNum+"/"+orderNum);
 		

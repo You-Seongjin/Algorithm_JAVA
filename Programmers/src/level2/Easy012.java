@@ -13,7 +13,7 @@ N명의 참가자는 각각 1부터 N번을 차례대로 배정받습니다. 그
 단, A번 참가자와 B번 참가자는 서로 붙게 되기 전까지 항상 이긴다고 가정합니다.
 */
 
-public class Easy12 {
+public class Easy012 {
 	
 	public int solution(int n, int a, int b) {
 		int tempA=a;
@@ -31,7 +31,7 @@ public class Easy12 {
 
 	public static void main(String[] args) {
 		
-		Easy12 asd = new Easy12();
+		Easy012 asd = new Easy012();
 		System.out.println(asd.solution(8, 4, 7));//3
 		
 	}

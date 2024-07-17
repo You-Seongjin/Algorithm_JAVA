@@ -15,15 +15,10 @@ i = 1, 2, 3, ..., n에 대해서, 다음 과정을 반복합니다.
 public class Easy014 {
 	
 	public int[] solution(int n, long left, long right) {
-		int numArr[] = new int[(int)Math.pow(n, 2)];
-		int answer[] = new int[(int)(right-left+1)];
+		int answer[] = new int[(int)(right - left + 1)];
 		
-		for(int i = 0 ; i < numArr.length; i++) {
-			numArr[i] = (i / n) +1 >= (i % n) +1 ? (i / n) +1 : (i % n) +1;
-		}
-		
-		for(int i = 0 ; i < answer.length; i++) {
-			answer[i] = numArr[(int)left + i];
+		for(long i = left ; i <= right ; i++) {
+			answer[(int)(i-left)] = (int)(i / n) +1 >= (int)(i % n) +1 ? (int)(i / n) +1 : (int)(i % n) +1;
 		}
 		
         return answer;
